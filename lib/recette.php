@@ -17,3 +17,8 @@ function getRecetteById(PDO $pdo, int $getId)
     $recette = $stmt->fetch(PDO::FETCH_ASSOC);
     return $recette;
 }
+
+
+function retourLigne (string $string){
+    return explode(PHP_EOL, $string);
+}
