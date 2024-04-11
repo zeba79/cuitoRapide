@@ -1,2 +1,2 @@
 <?php
-define("HOME_PAGE_RECETTES_LIMIT", 2);
+define("HOME_PAGE_RECETTES_LIMIT", 6);

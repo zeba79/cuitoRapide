@@ -1,7 +1,7 @@
 <?php
 function getRecettes(PDO $pdo, int $limit = null)
 {
-    $sql = 'SELECT * FROM recettes';
+    $sql = 'SELECT * FROM recettes ';
 
     if ($limit) {
         $sql .= "LIMIT :limit";

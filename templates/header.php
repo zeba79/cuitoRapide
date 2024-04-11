@@ -1,6 +1,5 @@
 <?php
 require_once './lib/pdo.php';
-require_once './lib/config.php';
 ?>
 
 

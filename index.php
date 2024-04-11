@@ -1,8 +1,9 @@
 <?php
+require_once './lib/config.php';
 require_once './lib/recette.php';
 require_once './templates/header.php';
 
-$recettes = getRecettes($pdo);
+$recettes = getRecettes($pdo, HOME_PAGE_RECETTES_LIMIT);
 ?>
 
 <div class="container">
