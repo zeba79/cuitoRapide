@@ -1,5 +1,6 @@
 <?php
 require_once './lib/pdo.php';
+require_once './lib/config.php';
 ?>
 
 
@@ -15,8 +16,9 @@ require_once './lib/pdo.php';
 <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Accueil</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Recettes</a></li>
+        <li class="nav-item"><a href="index.php" class="nav-link active" aria-current="page">Accueil</a></li>
+        <li class="nav-item"><a href="recettes.php" class="nav-link">Recettes</a></li>
+        <li class="nav-item"><a href="ajouterRecette.php" class="nav-link">Ajouter une recette</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
       </ul>
     </header>
