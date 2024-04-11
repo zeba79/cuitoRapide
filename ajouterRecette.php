@@ -46,7 +46,7 @@ foreach ($errors as $error) {?>
 <?php }?>
 
 <div class="container">
-<h1>Formulaire d'ajout recettes</h1>
+<h1 class="shadow-none p-3 mb-5 bg-body-tertiary rounded  text-center" >Formulaire d'ajout recettes</h1>
 <form action="" method="post">
                 <div class="mb-3">
             <label for="nom">Nom :</label>
@@ -71,7 +71,7 @@ foreach ($errors as $error) {?>
         </div>
 
         <div class="mb-3">
-            <input type="submit" name="ajouterRecette" value="Ajouter recette" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter cette recette ?')" class="parrotbtn" >
+            <input type="submit" name="ajouterRecette" value="Ajouter une recette" onclick=" return confirm('Êtes-vous sûr de vouloir ajouter cette recette ?')" class="parrotbtn" >
         </div>
 
 </form>

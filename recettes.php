@@ -8,7 +8,7 @@ $recettes = getRecettes($pdo);
 ?>
 
 <div class="container">
-    <h1 class="shadow-none p-3 mb-5 bg-body-tertiary rounded" >Une recettes vous tente ? Alors vous êtes à la bonne page</h1>
+    <h1 class="shadow-none p-3 mb-5 bg-body-tertiary rounded text-center" >Une recettes vous tente ? Alors vous êtes à la bonne page</h1>
   <div class="row">
 <?php
 foreach ($recettes as $key => $recette) {
