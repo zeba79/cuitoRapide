@@ -1,5 +1,6 @@
 <?php
 require_once './lib/pdo.php';
+require_once './lib/config.php';
 require_once './lib/recette.php';
 require_once './templates/header.php';
 
@@ -9,6 +10,7 @@ if (isset($_GET['id'])) {
 } else {
     echo 'article introuvable';
 }
+$imagePath = getRecetteByImage($recette['image']);
 
 if ($recette) {
     $ingredients = retourLigne($recette['ingredients']);
@@ -20,7 +22,7 @@ if ($recette) {
 <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="./uploads/images/<?=$recette['image'];?>" class="card-img-top" alt="<?=$recette['image'];?>">
+        <img src="<?=$imagePath;?>" class="card-img-top" alt="<?=$recette['nom'];?>">
       </div>
       <div class="col-lg-6">
       <div class="card-body">

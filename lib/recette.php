@@ -1,5 +1,5 @@
 <?php
-function getRecettes(PDO $pdo, int $limit = null)
+function getRecettes(PDO $pdo, int $limit = null): array
 {
     $sql = 'SELECT * FROM recettes ';
 
@@ -19,7 +19,7 @@ function getRecettes(PDO $pdo, int $limit = null)
     return $recettes;
 }
 
-function getRecetteById(PDO $pdo, int $getId)
+function getRecetteById(PDO $pdo, int $getId): array | bool
 {
     $sql = 'SELECT * FROM recettes WHERE id = :id';
     $stmt = $pdo->prepare($sql);
@@ -29,7 +29,19 @@ function getRecetteById(PDO $pdo, int $getId)
     return $recette;
 }
 
+//  fonction pour créer les auts de ligne
 function retourLigne(string $string)
 {
     return explode(PHP_EOL, $string);
+}
+
+function getRecetteByImage(string | null $image): string
+{
+    if ($image == null) {
+        $imagePath = IMAGES_RECETTE_PARDEFAUT . "default.jpg";
+
+    } else {
+        $imagePath = IMAGES_RECETTE_UPLOADS . htmlentities($image);
+    }
+    return $imagePath;
 }
